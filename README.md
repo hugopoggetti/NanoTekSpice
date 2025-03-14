@@ -59,12 +59,23 @@ Once inside the simulator, you can enter:
 ```
 > ./nanotekspice nts_single/4017_johnson.nts
 > display
-Tick: 0
-Input(s):
-i0: U
-i1: 1
-Output(s):
-q0: 0
-q1: U
+tick: 0
+input(s):
+  in_0: U
+  in_1: U
+  in_r: U
+output(s):
+  out_0: U
+  out_1: U
+  out_2: U
+  out_3: U
+  out_4: U
+  out_5: U
+  out_6: U
+  out_7: U
+  out_8: U
+  out_9: U
+  out_s: U
+>
 ...
 ``` NanoTekSpice
