@@ -1,0 +1,28 @@
+# Flip-flop RS
+#
+# in_reset -1-+---\
+#             | or |o-3-+- out_q
+#         +-2-+---/     |
+#         |             |
+#         +-----\ /-----+
+#                X
+#         +-----/ \-----+
+#         |             |
+#         +-5-+---\     |
+#             | or |o-4-+-out_qb
+# in_set ---6-+---/
+
+.chipsets:
+4001 nor
+input in_reset
+input in_set
+output out_q
+output out_qb
+
+.links:
+in_reset:1 nor:1
+nor:4 nor:2
+nor:5 nor:3
+in_set:1 nor:6
+out_q:1 nor:3
+out_qb:1 nor:4

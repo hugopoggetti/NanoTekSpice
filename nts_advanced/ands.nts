@@ -1,0 +1,34 @@
+# Combinatory of AND (4081)
+#
+# in_a  -1-+---\
+#          |and1 |-3-+
+# in_b  -2-+---/    |
+#                   +-13-+---\
+# in_c  -5-+---\         |and3 |-11-+
+#          |and2 |-4---12-+---/     |
+# in_d  -6-+---/                   +-9-+---\
+#                                      |and4 |-10- out
+# in_e  -----------------------------8-+---/
+
+.chipsets:
+input in_a
+input in_b
+input in_c
+input in_d
+input in_e
+output out
+and and4
+and and1
+and and2
+and and3
+
+.links:
+in_a:1 and1:1
+in_b:1 and1:2
+in_c:1 and2:1
+in_d:1 and2:2
+in_e:1 and4:2
+and1:3 and3:1
+and2:3 and3:2
+and3:3 and4:1
+and4:3 out:1

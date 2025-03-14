@@ -1,0 +1,16 @@
+# Basic OR logic gate
+#
+# in_1  -1-+---\
+#          | or |-3- out
+# in_2  -2-+---/
+
+.chipsets:
+input in_1
+input in_2
+output out
+or gate
+
+.links:
+in_1:1 gate:1
+in_2:1 gate:2
+out:1 gate:3

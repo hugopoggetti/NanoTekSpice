@@ -1,0 +1,12 @@
+# Basic NOT logic gate
+#
+# in -1-|>o-2- out
+
+.chipsets:
+input in
+output out
+not gate
+
+.links:
+in:1 gate:1
+out:1 gate:2
